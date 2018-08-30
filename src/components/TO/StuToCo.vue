@@ -28,13 +28,13 @@
         你选择的学生有：
       </div>
       <div>
-            <Row>
-      <div v-for="s in stus" :key="s.tid">
-        <Col span="3">
-        <Checkbox v-model="s.isChoose" v-if="s.isChoose">{{s.stuname}}</Checkbox>
-        </Col>
-      </div>
-    </Row>
+        <Row>
+          <div v-for="s in stus" :key="s.tid">
+            <Col span="3">
+            <Checkbox v-model="s.isChoose" v-if="s.isChoose">{{s.stuname}}</Checkbox>
+            </Col>
+          </div>
+        </Row>
       </div>
     </Row>
     <Row>
@@ -56,12 +56,20 @@ export default {
       stus: []
     }
   },
-  computed: {
-
-  },
+  computed: {},
   methods: {
     handleSubmit () {
-      console.log('object')
+      let pa = {
+        cotid: this.co,
+        stus: this.stus
+      }
+      axios.post('/api/postCotostu', pa).then((res, err) => {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log(res)
+        }
+      })
     },
     getCos () {
       let params = {
