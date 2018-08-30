@@ -7,16 +7,13 @@
         </Header>
         <Content :style="{padding: '0 50px'}">
           <Breadcrumb :style="{margin: '20px 0'}">
-            <!-- <BreadcrumbItem>Home</BreadcrumbItem>
-            <BreadcrumbItem>Components</BreadcrumbItem>
-            <BreadcrumbItem>Layout</BreadcrumbItem> -->
           </Breadcrumb>
           <Card>
             <div style="min-height: 200px;">
               <router-view/>
             </div>
+            <br><br><br><br><br><br>
           </Card>
-
         </Content>
         <Footer class="layout-footer-center">
           <FooterCon></FooterCon>
@@ -28,14 +25,12 @@
 
 <script>
 import HeaderCon from '@/components/Header/HeaderCon'
-// import HeaderConRig from '@/components/Header/HeaderConRig'
 import FooterCon from '@/components/Footer/FooterCon'
 export default {
   name: 'App',
   components: {
     HeaderCon,
     FooterCon
-    // HeaderConRig
   }
 }
 </script>

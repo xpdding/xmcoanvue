@@ -1,39 +1,25 @@
 <template>
   <div>
-    <Menu mode="horizontal" theme="dark" active-name="1">
+    <Menu mode="horizontal" theme="dark" active-name="1" @on-select="routeTo">
       <div class="layout-logo">
-        <div class="logo-text">OFWEBDEMO</div>
+        <div class="logo-text">课程评论系统</div>
       </div>
       <div class="layout-nav">
-        <MenuItem name="1">
-        <router-link to='/'>
+        <MenuItem name="/teainfo">
         <Icon type="ios-navigate"></Icon>
-        TODOMAIN</router-link>
+        个人主页
         </MenuItem>
-
-        <Submenu name="3">
-            <template slot="title">
-                <Icon type="ios-stats" />
-                FN
-            </template>
-            <MenuGroup title="增加">
-                <MenuItem name="3-1">增加项目</MenuItem>
-                <MenuItem name="3-2">增加标签</MenuItem>
-                <MenuItem name="3-3">增加时间</MenuItem>
-            </MenuGroup>
-            <!-- <MenuGroup title="留存">
-                <MenuItem name="3-4">用户留存</MenuItem>
-                <MenuItem name="3-5">流失用户</MenuItem>
-            </MenuGroup> -->
-        </Submenu>
-
-        <MenuItem name="2">
-        <Icon type="ios-analytics"></Icon>
+        <MenuItem name="/check">
+        <Icon type="ios-navigate"></Icon>
+        录入评价
+        </MenuItem>
+        <MenuItem name="/see">
+        <Icon type="ios-navigate"></Icon>
+        动态信息
+        </MenuItem>
+        <MenuItem name="/selfcenter">
+        <Icon type="ios-navigate"></Icon>
         个人中心
-        </MenuItem>
-        <MenuItem name="4">
-        <Icon type="ios-paper"></Icon>
-        登入/登出
         </MenuItem>
       </div>
     </Menu>
@@ -44,6 +30,12 @@ export default {
   name: 'HeaderCon',
   data () {
     return {}
+  },
+  methods: {
+    routeTo (e) {
+      console.log(e)
+      this.$router.push(e)
+    }
   }
 }
 </script>
@@ -53,7 +45,7 @@ export default {
   margin: 0 auto;
   margin-right: 20px;
 }
-.logo-text{
+.logo-text {
   line-height: 100%;
   padding: 10px 2px;
 }

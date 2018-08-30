@@ -1,21 +1,21 @@
-import AddL from '@/components/AddItems/AddL'
-import AddP from '@/components/AddItems/AddP'
-import AddT from '@/components/AddItems/AddT'
+import AddTea from '@/components/AddItems/AddTea'
+import AddStu from '@/components/AddItems/AddStu'
+import AddCo from '@/components/AddItems/AddCo'
 
 export const ROfAdd = [
   {
-    path: '/addl',
-    name: 'AddL',
-    component: AddL
+    path: '/addtea',
+    name: 'AddTea',
+    component: AddTea
   },
   {
-    path: '/addt',
-    name: 'AddT',
-    component: AddT
+    path: '/addco',
+    name: 'AddCo',
+    component: AddCo
   },
   {
-    path: '/addp',
-    name: 'AddP',
-    component: AddP
+    path: '/addstu',
+    name: 'AddStu',
+    component: AddStu
   }
 ]
