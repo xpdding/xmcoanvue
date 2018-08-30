@@ -1,6 +1,7 @@
 import AddTea from '@/components/AddItems/AddTea'
 import AddStu from '@/components/AddItems/AddStu'
 import AddCo from '@/components/AddItems/AddCo'
+import StuToCo from '@/components/TO/StuToCo'
 
 export const ROfAdd = [
   {
@@ -17,5 +18,10 @@ export const ROfAdd = [
     path: '/addstu',
     name: 'AddStu',
     component: AddStu
+  },
+  {
+    path: '/stutoco',
+    name: 'StuToCo',
+    component: StuToCo
   }
 ]

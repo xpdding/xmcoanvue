@@ -6,21 +6,30 @@
       </div>
       <div class="layout-nav">
         <MenuItem name="/teainfo">
-        <Icon type="ios-navigate"></Icon>
-        个人主页
+        <Icon type="md-basket" /> 个人主页
         </MenuItem>
         <MenuItem name="/check">
-        <Icon type="ios-navigate"></Icon>
-        录入评价
+        <Icon type="ios-cafe" /> 录入评价
         </MenuItem>
         <MenuItem name="/see">
-        <Icon type="ios-navigate"></Icon>
-        动态信息
+        <Icon type="md-swap" /> 动态信息
         </MenuItem>
         <MenuItem name="/selfcenter">
-        <Icon type="ios-navigate"></Icon>
-        个人中心
+        <Icon type="ios-rose" /> 个人中心
         </MenuItem>
+        <Submenu name="3">
+          <template slot="title">
+            <Icon type="ios-stats" /> 录入信息
+          </template>
+          <MenuGroup title="录入基础信息">
+            <MenuItem name="/addtea">增加老师</MenuItem>
+            <MenuItem name="/addstu">增加同学</MenuItem>
+            <MenuItem name="/addco">增加课程</MenuItem>
+          </MenuGroup>
+          <MenuGroup title="信息关联">
+            <MenuItem name="/stutoco">课程X学生</MenuItem>
+          </MenuGroup>
+        </Submenu>
       </div>
     </Menu>
   </div>
@@ -41,7 +50,7 @@ export default {
 </script>
 <style scoped>
 .layout-nav {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
   margin-right: 20px;
 }

@@ -32,7 +32,6 @@ export default {
       submitData: {
         coname: '',
         cosome: '',
-        cotea: '',
         coteatid: ''
       }
     }
@@ -42,7 +41,7 @@ export default {
       let params = {
         coname: this.submitData.coname,
         cosome: this.submitData.cosome,
-        coteatid: this.submitData.coteatid
+        coteatid: this.$store.state.teainfo.teatid
       }
       console.log(params)
       axios.post('/api/addNewCo', params).then(res => {

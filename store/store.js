@@ -5,13 +5,17 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    uinfo: {
-      uname: '张三丰',
-      upass: '123456',
-      upass2: '654321',
-      inuse: '1',
-      tid: 'tid-user-zhangsanfeng',
-      id: '52'
+    userinfo: {
+      uname: 'admin',
+      upass: 'adminpass',
+      utid: 'tidadmin',
+      uinuse: '1'
+    },
+    teainfo: {
+      teaname: 'Timor提莫',
+      teawxname: 'Timoe_WX',
+      teatid: 'addNewTea2018-08-30#14:47:32admin',
+      teamob: '13988889999'
     }
   },
   getters: {
