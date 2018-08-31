@@ -63,6 +63,7 @@ export default {
         cotid: this.co,
         stus: this.stus
       }
+      console.log(pa)
       axios.post('/api/postCotostu', pa).then((res, err) => {
         if (err) {
           console.log(err)
