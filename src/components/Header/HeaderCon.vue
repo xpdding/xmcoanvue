@@ -5,10 +5,10 @@
         <div class="logo-text">课程评论系统</div>
       </div>
       <div class="layout-nav">
-        <MenuItem name="/teainfo">
+        <MenuItem name="/self">
         <Icon type="md-basket" /> 个人主页
         </MenuItem>
-        <MenuItem name="/check">
+        <MenuItem name="/sddcomments">
         <Icon type="ios-cafe" /> 录入评价
         </MenuItem>
         <MenuItem name="/see">

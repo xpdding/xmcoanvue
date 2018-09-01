@@ -9,12 +9,15 @@ import {
 import {
   ROfSelf
 } from './SubRouter/ROfSelf'
+import {
+  ROfMain
+} from './SubRouter/ROfMain'
 
 Vue.use(Router)
 Vue.use(Vuex)
 export default new Router({
   routes: [
-    ...ROfAdd, ...ROfSelf,
+    ...ROfAdd, ...ROfSelf, ...ROfMain,
     {
       path: '/',
       name: 'Main',

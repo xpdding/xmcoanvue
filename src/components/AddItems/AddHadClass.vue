@@ -5,19 +5,39 @@
       <Row>
         <Col span="8">课程名：</Col>
         <Col span="16">
-        <Input v-model="submitData.stuname" placeholder="请输入名称" style="width: 300px" />
+        <Select v-model="model1" style="width:200px">
+          <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+        </Select>
         </Col>
       </Row>
       <Row>
         <Col span="8">上课日期：</Col>
         <Col span="16">
-        <Input v-model="submitData.stuwxname" placeholder="请输入名称" style="width: 300px" />
+        <DatePicker type="date" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
       </Row>
       <Row>
         <Col span="8">今天的第几次课：</Col>
         <Col span="16">
-        <Input v-model="submitData.stumob" placeholder="请输入名称" style="width: 300px" />
+        <RadioGroup v-model="phone">
+          <Radio label="apple">
+            <Icon type="logo-apple"></Icon>
+            <span>Apple</span>
+          </Radio>
+          <Radio label="android">
+            <Icon type="logo-android"></Icon>
+            <span>Android</span>
+          </Radio>
+          <Radio label="windows">
+            <Icon type="logo-windows"></Icon>
+            <span>Windows</span>
+          </Radio>
+        </RadioGroup>
+        <RadioGroup v-model="animal">
+          <Radio label="金斑蝶"></Radio>
+          <Radio label="爪哇犀牛"></Radio>
+          <Radio label="印度黑羚"></Radio>
+        </RadioGroup>
         </Col>
       </Row>
       <Row>
@@ -56,7 +76,9 @@ export default {
         stuwhomob: this.submitData.stuwhomob
       }
       console.log(params)
-      axios.post('/api/addNewStu', params).then(res => { console.log(res) })
+      axios.post('/api/addNewStu', params).then(res => {
+        console.log(res)
+      })
     }
   }
 }
