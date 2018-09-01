@@ -29,6 +29,9 @@
           <MenuGroup title="信息关联">
             <MenuItem name="/stutoco">课程X学生</MenuItem>
           </MenuGroup>
+                    <MenuGroup title="录入已上课程">
+            <MenuItem name="/hadclass">录入已上课程</MenuItem>
+          </MenuGroup>
         </Submenu>
       </div>
     </Menu>

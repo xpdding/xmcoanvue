@@ -42,6 +42,16 @@
     </Row>
     <h3>{{cos}}{{co}}</h3>
     <h2>{{stus[0]}}</h2>
+    <div>
+      <div>下面是你的课程及学生信息：</div>
+      <!-- <Row>
+        <div v-for="s in stus" :key="s.tid">
+          <Col span="3">
+          <Checkbox v-model="s.isChoose" v-if="s.isChoose">{{s.stuname}}</Checkbox>
+          </Col>
+        </div>
+      </Row> -->
+    </div>
   </div>
 </template>
 <script>
