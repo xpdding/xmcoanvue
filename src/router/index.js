@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/components/Main'
 import Vuex from 'vuex'
+// import Moment from 'moment'
 
 import {
   ROfAdd
@@ -15,6 +16,7 @@ import {
 
 Vue.use(Router)
 Vue.use(Vuex)
+// Vue.use(Moment)
 export default new Router({
   routes: [
     ...ROfAdd, ...ROfSelf, ...ROfMain,
