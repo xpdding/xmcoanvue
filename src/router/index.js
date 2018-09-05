@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from '@/components/Main'
+// import Main from '@/components/Main'
 import Vuex from 'vuex'
 // import Moment from 'moment'
 
@@ -19,11 +19,6 @@ Vue.use(Vuex)
 // Vue.use(Moment)
 export default new Router({
   routes: [
-    ...ROfAdd, ...ROfSelf, ...ROfMain,
-    {
-      path: '/',
-      name: 'Main',
-      component: Main
-    }
+    ...ROfAdd, ...ROfSelf, ...ROfMain
   ]
 })
