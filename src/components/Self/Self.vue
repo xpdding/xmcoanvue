@@ -1,13 +1,15 @@
 <template>
   <div>
-    Self
     <Row>
-      <Col span="24">我的个人信息：</Col>
-      <Col span="24">我的姓名是：{{teaname}}</Col>
-    </Row>
-    <Row>
-      <Col span="24">我的课程有：</Col>
-      <Col span="24">{{mycos}}</Col>
+      <Col span="24">
+          <div style="background:#eee;padding: 20px">
+        <Card :bordered="false">
+            <p slot="title">我的个人信息：</p>
+            <p>我的姓名是：{{teaname}}</p>
+            <p>我的课程有：{{mycos}}</p>
+        </Card>
+    </div>
+      </Col>
     </Row>
     <Row>
       <div v-for="stus in stusOfEachCo" :key="stus.coname">

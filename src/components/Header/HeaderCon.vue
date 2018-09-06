@@ -8,28 +8,48 @@
         <MenuItem name="/self">
         <Icon type="md-basket" /> 个人主页
         </MenuItem>
-        <MenuItem name="/sddcomments">
+
+        <MenuItem name="/addcomments">
         <Icon type="ios-cafe" /> 录入评价
         </MenuItem>
+
+        <MenuItem name="/ratingview">
+        <Icon type="ios-cafe" /> 评价一览
+        </MenuItem>
+
         <MenuItem name="/see">
         <Icon type="md-swap" /> 动态信息
         </MenuItem>
-        <MenuItem name="/selfcenter">
-        <Icon type="ios-rose" /> 个人中心
-        </MenuItem>
+
+        <Submenu name="4">
+          <template slot="title">
+            <Icon type="ios-rose" /> 个人中心
+          </template>
+          <MenuGroup title="基础菜单">
+            <MenuItem name="/reg">协助注册</MenuItem>
+            <MenuItem name="/logout">登出系统</MenuItem>
+            <MenuItem name="/changese">修改密码</MenuItem>
+          </MenuGroup>
+                    <MenuGroup title="看些数据">
+            <MenuItem name="/reg">从课程看所含学生</MenuItem>
+            <MenuItem name="/logout">从学生看所报课程</MenuItem>
+            <MenuItem name="/changese">看所有已上课程及评价情况</MenuItem>
+          </MenuGroup>
+        </Submenu>
+
         <Submenu name="3">
           <template slot="title">
             <Icon type="ios-stats" /> 录入信息
           </template>
           <MenuGroup title="录入基础信息">
-            <MenuItem name="/addtea">增加老师</MenuItem>
-            <MenuItem name="/addstu">增加同学</MenuItem>
-            <MenuItem name="/addco">增加课程</MenuItem>
+            <MenuItem name="/addtea">管理老师</MenuItem>
+            <MenuItem name="/addstu">管理同学</MenuItem>
+            <MenuItem name="/addco">管理课程</MenuItem>
           </MenuGroup>
           <MenuGroup title="信息关联">
             <MenuItem name="/stutoco">课程X学生</MenuItem>
           </MenuGroup>
-                    <MenuGroup title="录入已上课程">
+          <MenuGroup title="录入已上课程">
             <MenuItem name="/hadclass">录入已上课程</MenuItem>
           </MenuGroup>
         </Submenu>

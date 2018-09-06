@@ -43,6 +43,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 10px;
+  width: 90%;
+  margin: 0 auto;
 }
 .layout {
   border: 1px solid #d7dde4;

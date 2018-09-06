@@ -1,6 +1,7 @@
 import Self from '@/components/Self/Self'
 import AddComments from '@/components/AddComments/AddComments'
 import See from '@/components/See/See'
+import RatingView from '@/components/RatingView/RatingView'
 
 export const ROfMain = [{
   path: '/self',
@@ -12,8 +13,13 @@ export const ROfMain = [{
   component: See
 },
 {
-  path: '/sddcomments',
+  path: '/addcomments',
   name: 'AddComments',
   component: AddComments
+},
+{
+  path: '/ratingview',
+  name: 'RatingView',
+  component: RatingView
 }
 ]
